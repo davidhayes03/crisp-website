@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRISP - Cherry Bryn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Floorplan Lightbox -->
+    <div class="lightbox" id="floorplanLightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="../images/plans.jpg" alt="Floorplan" class="lightbox-image">
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Full Screen Menu -->
+    <aside class="aside-menu" id="asideMenu">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <div class="menu-container">
+            <div class="menu-col-left">
+                <ul>
+                    <li class="menu-item">
+                        <a href="../index.html">
+                            <span class="menu-number">01</span>
+                            <span class="menu-name">Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">
+                            <span class="menu-number">02</span>
+                            <span class="menu-name">Projects</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#contact">
+                            <span class="menu-number">04</span>
+                            <span class="menu-name">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-col-right">
+                <div class="contact-links">
+                    <a href="tel:+44123456789">+44 123 456 789</a>
+                    <a href="mailto:hello@crisp.co.uk">hello@crisp.co.uk</a>
+                    <a href="#">123 High Street, Kent, UK</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <a href="../index.html" class="header-logo">
+            <img src="../images/logo/Crisp-interiors-logo-trans-whitetext.png" alt="CRISP">
+        </a>
+        <button id="burger">
+            <div class="bar-container">
+                <span class="bar top"></span>
+                <span class="bar bottom"></span>
+            </div>
+            <span class="menu-text">Menu</span>
+        </button>
+    </header>
+
+    <!-- Project Banner -->
+    <section class="project-banner" id="project-banner">
+        <img src="../images/InProgress/CherryBryn/IMG_6775.jpeg" alt="Crisp Building">
+        <div class="banner-overlay"></div>
+    </section>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+    </div>
+
+    <!-- Project Header -->
+    <section class="project-header" id="project-header">
+        <div class="container">
+            <div class="project-header-grid">
+                <div class="project-header-left">
+                    <h1 class="project-title">Cherry Bryn.</h1>
+                    <h3 class="project-title-sub">Some blurbbbbb</h3>
+
+                </div>
+                <div class="project-header-right">
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Property Type</span>
+                            <span class="project-meta-value">Detached</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Bedrooms</span>
+                            <span class="project-meta-value">5</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Bathrooms.</span>
+                            <span class="project-meta-value">4</span>
+                        </div>
+
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Status</span>
+                            <span class="project-meta-value project-meta-value-inprogress">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="project-description">
+                Cherry Bryn is a landmark residential project where the original house has been completely demolished to make way for a stunning, larger new build home. This exceptional property is designed for modern family living, featuring five bedrooms, four bathrooms, and a spacious cellar for versatile use.
+            </p>
+            <br />
+            <ul class="project-description" style="margin-left:30px;">
+                <li>Brand new detached residence</li>
+                <li>Five bedrooms, four bathrooms</li>
+                <li>Large cellar for storage or leisure</li>
+                <li>Contemporary design and premium finishes</li>
+                <li>Major works currently in progress</li>
+                <li>Residential property in a sought-after location</li>
+            </ul>
+            <br />
+            <p class="project-description">
+                All major construction works are underway, with the project set to deliver a home of outstanding quality and comfort. Cherry Bryn is being built to the highest standards, offering spacious living areas, modern amenities, and thoughtful architectural details throughout.
+            </p>
+            <br />
+            <p class="project-description">
+                Current photos showcase the build in progress, highlighting the transformation and scale of the project. More final images will be added as the property nears completion, so please check back soon to see the finished results.
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery" id="project-gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/InProgress/CherryBryn/IMG_6775.jpeg" alt="crisp Exterior View">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/InProgress/CherryBryn/501.jpeg" alt="crisp Exterior View">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/InProgress/CherryBryn/445.jpg" alt="crisp Detail View">
+                </div>
+                <div class="gallery-item full-width">
+                    <img src="../images/InProgress/CherryBryn/452.jpg" alt="crisp Wide View">
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2 class="contact-title">Let's Work Together</h2>
+        <p class="contact-text">If you're interested in partnering with us, selling land, or learning more about our current and upcoming developments, we would be pleased to hear from you.</p>
+        <a href="mailto:hello@crisp.co.uk" class="contact-cta">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="../images/logo/Crisp Construction ltd logo.jpg" alt="CRISP">
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-menu">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram???</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-back-to-top">
+                        <a href="#">
+                            Back to top
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19V5M5 12l7-7 7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar">
+                <p class="footer-copyright">&copy; Crisp Construction Ltd - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

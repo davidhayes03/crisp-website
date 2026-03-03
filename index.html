@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crisp Construction - Design & Architecture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+</head>
+<body>
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Full Screen Slide-in Menu -->
+    <aside class="aside-menu" id="asideMenu">
+        <div class="menu-container">
+            <div class="menu-col-left">
+                <ul>
+                    <li class="menu-item">
+                        <a href="#hero-section" class="menu-link">
+                            <span class="menu-number">01</span>
+                            <span class="menu-name">Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#about" class="menu-link">
+                            <span class="menu-number">02</span>
+                            <span class="menu-name">About</span>
+                        </a>
+                    </li>
+                    <li class="menu-item menu-open">
+                        <a href="#developments" class="menu-link">
+                            <span class="menu-number">01</span>
+                            <span class="menu-name">Projects</span>
+                            <span class="menu-toggle">−</span>
+                        </a>
+                        <ul class="sub-menu open">
+                            <li><a href="pages/130HighStreet.html">130 High Street, Edenbridge</a></li>
+                            <li><a href="pages/130aHighStreet.html">130a High Street, Edenbridge</a></li>
+                            <li><a href="pages/6EdenView.html">6 Eden View, Edenbridge</a></li>
+                            <li><a href="pages/7EdenView.html">7 Eden View, Edenbridge</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#team" class="menu-link">
+                            <span class="menu-number">02</span>
+                            <span class="menu-name">Vision</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#services" class="menu-link">
+                            <span class="menu-number">03</span>
+                            <span class="menu-name">Services</span>
+                        </a>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#contact" class="menu-link">
+                            <span class="menu-number">04</span>
+                            <span class="menu-name">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-col-right">
+                <div class="contact-links">
+                    <a href="tel:+44123456789">+44 123 456 789</a>
+                    <a href="mailto:hello@crisp.co.uk">hello@crisp.co.uk</a>
+                    <a href="#">123 High Street, Kent, UK</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <a href="#" class="header-logo">
+            <img src="images/logo/Crisp-interiors-logo-trans-whitetext.png" alt="CRISP">
+        </a>
+        <button id="burger">
+            <div class="bar-container">
+                <span class="bar top"></span>
+                <span class="bar bottom"></span>
+            </div>
+            <span class="menu-text">Menu</span>
+        </button>
+    </header>
+
+    <!-- Hero Section with Video -->
+    <section class="hero-section" id="hero-section">
+        <video class="hero-video" autoplay muted loop playsinline poster="images/pexels-anete-lusina-4792479slim.jpg">
+            <source src="images/vid3.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-overlay-top"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span>Precision.</span><br>
+                <span>Vision.</span><br>
+                <span>Excellence.</span>
+            </h1>
+        </div>
+    </section>
+
+    <!-- Scroll Indicator (fixed) -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="about-title"><span class="title-black">About</span> <br/><span class="title-blue">Us.</span></h2>
+            
+            <div class="about-content-wrapper">
+                <div class="about-content">
+                    <div class="about-highlight">
+                        <p>We are a forward-thinking property development company based in Edenbridge, delivering high-quality residential developments across Kent and the surrounding areas.</p>
+                        <br />
+                        <p>Our focus is simple: to create thoughtfully designed, well-built homes that combine strong investment value with exceptional living standards. From land acquisition and planning through to construction and final sale, we manage every stage of the development process with professionalism, transparency, and attention to detail.</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/pexels-pixabay-416405.jpg" alt="Modern property development">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developments Section -->
+    <section class="developments-section" id="developments">
+        <div class="developments-header">
+            <h2 class="developments-title"><span class="title-black">Our</span> <br/> <span class="title-blue">Developments.</span></h2>
+        </div>
+        
+        <div class="development-filters">
+            <!--<button class="development-filters__btn development-filters__btn--active" data-filter="all">All</button>-->
+            <button class="development-filters__btn development-filters__btn--active" data-filter="completed">Completed</button>
+            <button class="development-filters__btn" data-filter="inprogress">In Progress</button>
+            <button class="development-filters__btn" data-filter="future">Future</button>
+        </div>
+        
+        <div class="development-cards">
+            <a href="pages/130HighStreet.html" class="development-card" data-status="completed">
+                <span class="development-card__status development-card__status--completed">Completed</span>
+                <div class="development-card__bg" style="background-image: url('images/Completed/130 High Street/130 High Street, TN8 5AY 001.jpg')"></div>
+                <span class="development-card__name">130 High Street</span>
+                <span class="development-card__arrow">→</span>
+            </a>
+            <a href="pages/130aHighStreet.html" class="development-card" data-status="completed">
+                <span class="development-card__status development-card__status--completed">Completed</span>
+                <div class="development-card__bg" style="background-image: url('images/Completed/130a High Street/Screenshot 2026-02-19 141031.png')"></div>
+                <span class="development-card__name">130a High Street</span>
+                <span class="development-card__arrow">→</span>
+            </a>
+            <a href="pages/6EdenView.html" class="development-card" data-status="completed">
+                <span class="development-card__status development-card__status--completed">Completed</span>
+                <div class="development-card__bg" style="background-image: url('images/Completed/6 Eden View/6 Eden View 17.jpg')"></div>
+                <span class="development-card__name">6 Eden View</span>
+                <span class="development-card__arrow">→</span>
+            </a>
+            <a href="pages/7EdenView.html" class="development-card" data-status="completed">
+                <span class="development-card__status development-card__status--completed">Completed</span>
+                <div class="development-card__bg" style="background-image: url('images/Completed/7 Eden View/7 Eden View 5.jpg')"></div>
+                <span class="development-card__name">7 Eden View</span>
+                <span class="development-card__arrow">→</span>
+            </a>
+            <a href="pages/CherryBryn.html" class="development-card" data-status="inprogress">
+                <span class="development-card__status development-card__status--inprogress">In Progress</span>
+                <div class="development-card__bg" style="background-image: url('images/InProgress/IMG_6775.jpeg')"></div>
+                <span class="development-card__name">Cherry Bryn</span>
+                <span class="development-card__arrow">→</span>
+            </a>
+            <a href="#" class="development-card" data-status="future">
+                <span class="development-card__status development-card__status--future">Future</span>
+                <div class="development-card__bg" style="background-image: url('images/Future/MG-1303-Crisp-Construction-High-Street-Exteriors-Draft-V02-02.jpg')"></div>
+                <span class="development-card__name">Eden View</span>
+                <span class="development-card__arrow">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="about-team-section" id="team">
+        <div class="container">
+            <h2 class="about-team-title"><span class="title-black">A shared</span> <br/> <span class="title-blue">vision.</span></h2>
+            
+            <div class="about-team-image">
+                <img src="images/stock-plans-slim.jpg" alt="Our Team">
+            </div>
+            
+            <div class="about-team-content">
+                <div class="about-team-highlight">
+                    <p>As a property development company rooted in Edenbridge, we understand the local market and the character of Kent's communities. Our goal is to enhance the areas we build in by delivering homes that are practical, attractive, and built to last.</p>
+                    <a href="#" class="about-team-btn">
+                        Discover our team
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="about-team-text">
+                    <p>At Crisp, architecture is born from an demanding dialogue between creative vision and technical rigor. We unite our expertise to design coherent, sustainable, and meaningful projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="services-title"><span class="title-black">Our</span><br><span class="title-blue">services.</span></h2>
+
+            <div class="services-two-column">
+                <div class="services-col-left">
+                    <h1 class="services-wow-title">
+                        We work closely with architects, planning consultants, engineers, and local authorities to ensure each project meets planning requirements, building regulations, and modern sustainability standards.
+
+                    </h1>
+                </div>i need someone to create new config for MH and Com, i have done it locally but now need to test in test before pre prod and assume you guys have a 'way' of doing it
+                <div class="services-col-right">
+                    <div class="service-item">
+                        <a href="#">
+                            <div class="service-content">
+                                <h3 class="service-title">Land sourcing and site appraisal</h3>
+                            </div>
+                            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service-item">
+                        <a href="#">
+                            <div class="service-content">
+                                <h3 class="service-title">Planning and design coordination</h3>
+                            </div>
+                            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service-item">
+                        <a href="#">
+                            <div class="service-content">
+                                <h3 class="service-title">Residential developments (single plots to multi-unit schemes)</h3>
+                            </div>
+                            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service-item">
+                        <a href="#">
+                            <div class="service-content">
+                                <h3 class="service-title">New build construction</h3>
+                            </div>
+                            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service-item">
+                        <a href="#">
+                            <div class="service-content">
+                                <h3 class="service-title">Refurbishment and conversion projects</h3>
+                            </div>
+                            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="service-item">
+                        <a href="#">
+                            <div class="service-content">
+                                <h3 class="service-title">Project management and delivery</h3>
+                            </div>
+                            <svg class="service-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2 class="contact-title">Let's Work Together</h2>
+        <p class="contact-text">If you're interested in partnering with us, selling land, or learning more about our current and upcoming developments, we would be pleased to hear from you.</p>
+        <a href="mailto:hello@crisp.co.uk" class="contact-cta">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo/Crisp Construction ltd logo.jpg" alt="CRISP">
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-menu">
+                        <li><a href="#hero-section">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#developments">Developments</a></li>
+                        <li><a href="#team">Vision</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-menu">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-back-to-top">
+                        <a href="#">
+                            Back to top
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar">
+                <p class="footer-copyright">&copy; Crisp Construction Ltd - All rights reserved</p>
+                <p class="footer-privacy"><a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

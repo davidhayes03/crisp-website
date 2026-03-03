@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRISP - 130 High Street</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Floorplan Lightbox -->
+    <div class="lightbox" id="floorplanLightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="../images/plans.jpg" alt="Floorplan" class="lightbox-image">
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- Full Screen Menu -->
+    <aside class="aside-menu" id="asideMenu">
+        <button class="menu-close" id="menuClose">&times;</button>
+        <div class="menu-container">
+            <div class="menu-col-left">
+                <ul>
+                    <li class="menu-item">
+                        <a href="../index.html">
+                            <span class="menu-number">01</span>
+                            <span class="menu-name">Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#">
+                            <span class="menu-number">02</span>
+                            <span class="menu-name">Projects</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#contact">
+                            <span class="menu-number">04</span>
+                            <span class="menu-name">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-col-right">
+                <div class="contact-links">
+                    <a href="tel:+44123456789">+44 123 456 789</a>
+                    <a href="mailto:hello@crisp.co.uk">hello@crisp.co.uk</a>
+                    <a href="#">123 High Street, Kent, UK</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="main-header" id="mainHeader">
+        <a href="130HighStreet.html" class="header-logo">
+            <img src="../images/logo/Crisp-interiors-logo-trans-whitetext.png" alt="CRISP">
+        </a>
+        <button id="burger">
+            <div class="bar-container">
+                <span class="bar top"></span>
+                <span class="bar bottom"></span>
+            </div>
+            <span class="menu-text">Menu</span>
+        </button>
+    </header>
+
+    <!-- Project Banner -->
+    <section class="project-banner" id="project-banner">
+        <img src="../images/Completed/130 High Street/130 High Street, TN8 5AY 003.jpg" alt="Helios Logistics Building">
+        <div class="banner-overlay"></div>
+    </section>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+    </div>
+
+    <!-- Project Header -->
+    <section class="project-header" id="project-header">
+        <div class="container">
+            <div class="project-header-grid">
+                <div class="project-header-left">
+                    <h1 class="project-title">130 High Street.</h1>
+                    <h3 class="project-title-sub">Former Star Pub Converted to 4 Houses</h3>
+                    <a href="../images/Completed/130 High Street/plans.jpg" class="floorplan-btn" id="floorplanBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <path d="M3 9h18M9 21V9" />
+                        </svg>
+                        View Floorplan
+                    </a>
+                    <br /> <br />
+                </div>
+                <div class="project-header-right">
+                    <div class="project-meta">
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Property Type</span>
+                            <span class="project-meta-value">Semi-Detached</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Bedrooms</span>
+                            <span class="project-meta-value">2</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Bathrooms.</span>
+                            <span class="project-meta-value">1</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Tenure</span>
+                            <span class="project-meta-value">Freehold</span>
+                        </div>
+                        <div class="project-meta-item">
+                            <span class="project-meta-label">Status</span>
+                            <span class="project-meta-value project-meta-value-complete">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="project-description">
+                <strong>130 High Street</strong> represents a landmark conversion project in the heart of Edenbridge.
+                This former Star Pub has been thoughtfully transformed into four distinctive residential properties,
+                each offering modern living while preserving the building's historic character.
+            </p>
+            <br />
+            <p class="project-description">
+                Immaculate, completely refurbished throughout. This two double bedroom Georgian converted property is just a short walk from Edenbridge High Street and mainline train stations. This charming home retains original features, combining period character with a modern twist. The property also benefits from a secure, sunny garden with rear access—perfect for alfresco dining—backing onto the River Eden and close to open countryside and walks. Offered with no onward chain.
+            </p>
+            <br />
+            <ul class="project-description" style="margin-left:30px;">
+                <li>Semi-detached period property</li>
+                <li>Two double bedrooms</li>
+                <li>Secure parking space</li>
+                <li>Period features</li>
+                <li>Sitting &amp; dining room</li>
+                <li>Brand new fitted kitchen</li>
+                <li>Downstairs WC</li>
+                <li>Sunny rear garden</li>
+                <li>Good transport links</li>
+                <li>Excellent selection of schools</li>
+                <li>Ideal buy to let investment</li>
+                <li>No onward chain</li>
+            </ul>
+            <br />
+            <p class="project-description">
+                The front door leads into an entrance hall with stairs to the first floor and a door into the reception room. The ground floor includes a lovely sitting room with herringbone flooring throughout the open plan reception room, a window to the front, and glazed double doors onto the garden. The brand new kitchen offers a good range of wall and base units and drawers, including integrated white goods. The ground floor also benefits from a downstairs WC. Upstairs, there are two good sized double bedrooms. Outside, there is a bright, sunny garden—perfect for entertaining friends and family.
+            </p>
+            <br />
+            <p class="project-description">
+                The development showcases our commitment to quality craftsmanship and attention to detail.
+                Each of the four houses features bespoke interiors, premium finishes, and carefully designed living
+                spaces that make the most of the building's unique architecture.
+            </p>
+            <br />
+            <p class="project-description">
+                M25 Godstone (J6) <strong>10 miles</strong> <br />
+                Oxted <strong>8 miles</strong><br />
+                East Grinstead <strong>10 miles</strong> <br />
+                Sevenoaks <strong>12 miles</strong> <br />
+                Tunbridge Wells <strong>13 miles</strong> <br />
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery" id="project-gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="../images/Completed/130 High Street/130 High Street, TN8 5AY 003.jpg" alt="crisp Exterior View">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/Completed/130 High Street/130 High Street, TN8 5AY 005.jpg" alt="crisp Exterior View">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/Completed/130 High Street/130 High Street, TN8 5AY 014.jpg" alt="crisp Detail View">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/Completed/130 High Street/130 High Street, TN8 5AY 013.jpg" alt="crisp Wide View">
+                </div>
+                <div class="gallery-item full-width">
+                    <img src="../images/Completed/130 High Street/130 High Street, TN8 5AY 006.jpg" alt="crisp Wide View">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2 class="contact-title">Let's Work Together</h2>
+        <p class="contact-text">If you're interested in partnering with us, selling land, or learning more about our current and upcoming developments, we would be pleased to hear from you.</p>
+        <a href="mailto:hello@crisp.co.uk" class="contact-cta">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="../images/logo/Crisp Construction ltd logo.jpg" alt="CRISP">
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-menu">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Instagram???</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-back-to-top">
+                        <a href="#">
+                            Back to top
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19V5M5 12l7-7 7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bar">
+                <p class="footer-copyright">&copy; Crisp Construction Ltd - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
