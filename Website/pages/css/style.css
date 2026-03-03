@@ -599,18 +599,20 @@ body.stop-scrolling {
 }
 
 .services-col-left {
-    flex: 0 0 260px;
+    flex: 0 0 320px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    padding-right: 32px;
 }
 
 .services-wow-title {
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 400;
     color: #1a1a1a;
     margin: 0;
-    letter-spacing: 0.05em;
+    line-height: 1.7;
+    opacity: 0.85;
 }
 
 .services-col-right {
@@ -620,6 +622,47 @@ body.stop-scrolling {
     gap: 24px;
 }
 
+.service-item {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.service-item:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.service-item a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #1a1a1a;
+    padding: 24px 28px;
+}
+
+.service-item:hover a {
+    color: #2563eb;
+}
+
+.service-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.service-arrow {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-arrow {
+    transform: translateX(6px);
+}
+
 @media (max-width: 900px) {
     .services-two-column {
         flex-direction: column;
@@ -627,11 +670,13 @@ body.stop-scrolling {
     }
 
     .services-col-left {
+        flex: 1 1 100%;
         justify-content: flex-start;
+        padding-right: 0;
         margin-bottom: 16px;
     }
 
     .services-wow-title {
-        font-size: 2.5rem;
+        font-size: 1.1rem;
     }
 }

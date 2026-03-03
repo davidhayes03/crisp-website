@@ -8,14 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
        HEADER SCROLL EFFECT
        ======================================== */
     const header = document.getElementById('mainHeader');
+    const headerLogo = document.querySelector('.header-logo img');
+    const whiteLogo = 'images/logo/Crisp-interiors-logo-trans-whitetext.png';
+    const darkLogo = 'images/logo/Crisp-interiors-logo-trans.png';
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('head-pinned');
+            headerLogo.src = darkLogo;
         } else {
             header.classList.remove('head-pinned');
+            headerLogo.src = whiteLogo;
         }
     });
+    
+    // Also check initial state
+    if (window.scrollY > 50) {
+        headerLogo.src = darkLogo;
+    }
     
     
     /* ========================================
@@ -78,6 +88,16 @@ document.addEventListener('DOMContentLoaded', function() {
         menuOverlay.classList.remove('open');
         document.body.classList.remove('stop-scrolling');
     });
+    
+    const menuClose = document.getElementById('menuClose');
+    if (menuClose) {
+        menuClose.addEventListener('click', () => {
+            burger.classList.remove('open');
+            asideMenu.classList.remove('open');
+            menuOverlay.classList.remove('open');
+            document.body.classList.remove('stop-scrolling');
+        });
+    }
     
     // Close menu when clicking a link (but not when toggling sub-menus)
     asideMenu.querySelectorAll('a').forEach(link => {

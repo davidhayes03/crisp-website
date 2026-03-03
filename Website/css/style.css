@@ -182,6 +182,28 @@ img {
     transform: translateX(0);
 }
 
+.aside-menu .menu-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+}
+
+.aside-menu .menu-close svg {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.aside-menu .menu-close:hover svg {
+    color: #2563eb;
+}
+
 .aside-menu .menu-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -197,7 +219,37 @@ img {
     padding: 0 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    height: calc(100vh - 100px);
+    padding-bottom: 40px;
+}
+
+.aside-menu .contact-links {
+    color: #fff;
+    text-align: right;
+    margin-top: auto;
+}
+
+.aside-menu .contact-links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.aside-menu .contact-links a:hover {
+    opacity: 1;
+    color: #2563eb;
+}
+
+.aside-menu .contact-links p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
 }
 
 .aside-menu ul {
@@ -221,6 +273,11 @@ img {
     padding: 25px 0;
     line-height: 1;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.aside-menu .menu-item > a:hover {
+    color: #2563eb;
 }
 
 .aside-menu .menu-number {
@@ -647,12 +704,49 @@ img {
 .about-team-image {
     width: 100%;
     margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
 }
 
 .about-team-image img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.about-team-ticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 16px 0;
+    overflow: hidden;
+}
+
+.ticker-track {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 20s linear infinite;
+}
+
+.ticker-track span {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0 40px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.ticker-track span:last-child {
+    border-right: none;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .about-team-content {
@@ -711,55 +805,157 @@ img {
     line-height: 1.1;
 }
 
+.services-two-column {
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.services-col-left {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+    min-height: 0;
+    color: white;
+}
+
+.services-col-left-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #60a5fa;
+    margin-bottom: 16px;
+    text-align: right;
+}
+
+.services-wow-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.7;
+    opacity: 0.9;
+    text-align: right;
+}
+
+.services-col-right {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+}
+
+.services-col-right-inner {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
 .service-item {
-    border-bottom: 1px solid rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    background: #fff;
+    overflow: hidden;
 }
 
-.service-item:hover {
-    transform: translateX(20px);
+.service-item.active {
+    border-color: #2563eb;
 }
 
-.service-item a {
+.service-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-decoration: none;
-    color: var(--color-black);
-    padding: 30px 0;
+    padding: 24px 28px;
+    cursor: pointer;
 }
 
-.service-item:hover a {
-    color: var(--color-black);
+.service-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 28px;
 }
 
-.service-content {
-    display: flex;
-    align-items: center;
-    gap: 60px;
+.service-item.active .service-details {
+    max-height: 200px;
+    padding: 0 28px 24px 28px;
+}
+
+.service-item.active .service-details p {
+    opacity: 0.7;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.service-item:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
 }
 
 .service-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    min-width: 200px;
-}
-
-.service-desc {
-    font-size: 1rem;
-    opacity: 0.7;
-    line-height: 1.6;
+    margin: 0;
 }
 
 .service-arrow {
-    width: 55px;
-    height: 55px;
+    width: 24px;
+    height: 24px;
     flex-shrink: 0;
     transition: transform 0.3s ease;
 }
 
-.service-item:hover .service-arrow {
-    transform: translate(5px, -5px);
+.service-item.active .service-arrow {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 900px) {
+    .services-two-column {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .services-col-left {
+        flex: 1 1 100%;
+        justify-content: center;
+        padding: 32px;
+        margin-bottom: 0;
+    }
+
+    .services-col-left-heading {
+        text-align: left;
+    }
+
+    .services-wow-title {
+        text-align: left;
+    }
+
+    .services-col-right {
+        padding: 24px 24px 0 24px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .services-col-right-inner {
+        padding: 24px;
+        border-radius: 8px 8px 0 0;
+    }
 }
 
 
@@ -795,11 +991,30 @@ img {
     text-decoration: none;
     font-size: 1rem;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contact-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #2563eb;
+    transition: left 0.4s ease;
+    z-index: -1;
 }
 
 .contact-cta:hover {
-    background: white;
-    color: var(--color-black);
+    border-color: #2563eb;
+    color: white;
+}
+
+.contact-cta:hover::before {
+    left: 0;
 }
 
 
@@ -813,7 +1028,7 @@ img {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 3fr 2fr 2fr 5fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
     gap: 0;
     padding-top: 20px;
     border-top: 1px solid rgba(0,0,0,0.1);
@@ -875,6 +1090,26 @@ img {
     height: 20px;
 }
 
+.footer-address {
+    text-align: right;
+}
+
+.footer-address p {
+    margin: 0 0 4px 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.footer-address .address-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+    margin-bottom: 8px;
+}
+
 .footer-bar {
     margin-top: 40px;
     padding-top: 30px;
@@ -919,8 +1154,13 @@ img {
         grid-template-columns: 1fr 1fr;
     }
     
-    .footer-col:last-child {
+    .footer-col:last-child,
+    .footer-col:nth-child(4) {
         grid-column: span 2;
+        text-align: left;
+    }
+    
+    .footer-address {
         text-align: left;
     }
     
@@ -968,31 +1208,6 @@ img {
         grid-template-columns: 1fr;
     }
     
-    .service-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-    
-    .service-arrow {
-        display: none;
-    }
-    
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-col:last-child {
-        grid-column: span 1;
-    }
-    
-    .footer-bar {
-        flex-direction: column;
-        gap: 15px;
-        text-align: left;
-    }
-}
-
 
 /* ========================================
    RESPONSIVE - SMALL MOBILE
@@ -1035,6 +1250,17 @@ img {
     }
     
     .aside-menu .menu-col-left {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-team-ticker {
+        padding: 12px 0;
+    }
+    
+    .ticker-track span {
+        font-size: 0.75rem;
         padding: 0 20px;
     }
 }
