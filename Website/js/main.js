@@ -243,25 +243,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     /* ========================================
-       SCROLL ANIMATIONS (Disabled)
+       SCROLL ANIMATIONS
        ======================================== */
-    // Scroll animations removed
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-in');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
     
-    sections.forEach(section => {
+    document.querySelectorAll('.about-section, .developments-section, .about-team-section, .services-section, .testimonials-section, .contact-section').forEach(section => {
+        section.classList.add('animate-on-scroll');
         observer.observe(section);
     });
     
