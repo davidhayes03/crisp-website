@@ -19,6 +19,39 @@
     color: var(--color-blue) !important;
 }
 
+/* Skip Link - Accessibility */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    z-index: 10001;
+    border-radius: 0 0 8px 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: none;
+}
+
+/* Focus Styles - Accessibility */
+*:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -1019,6 +1052,72 @@ img {
 
 
 /* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+
+.testimonials-section {
+    padding: 100px 0;
+    background: #f9f9f9;
+}
+
+.testimonials-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 600;
+    margin-bottom: 50px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.testimonial-stars {
+    font-size: 1.2rem;
+    color: #2563eb;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+.testimonial-quote {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0 0 24px;
+    color: #333;
+    font-style: italic;
+}
+
+.testimonial-author strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.testimonial-author span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+}
+
+.swiper-pagination-bullet-active {
+    background: #2563eb;
+}
+
+
+/* ========================================
    FOOTER
    ======================================== */
 
@@ -1263,4 +1362,81 @@ img {
         font-size: 0.75rem;
         padding: 0 20px;
     }
+    }
+}
+
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+
+body .gdpr-modal {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 300px !important;
+    min-height: 200px !important;
+    background: #fff !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+    z-index: 99999 !important;
+    padding: 24px !important;
+    display: none !important;
+}
+
+body .gdpr-modal.show {
+    display: block !important;
+}
+
+body .gdpr-modal-content h2 {
+    margin: 0 0 12px !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+body .gdpr-modal-content p {
+    margin: 0 0 20px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    color: #555 !important;
+}
+
+body .gdpr-modal-content a {
+    color: #2563eb !important;
+}
+
+body .gdpr-modal-buttons {
+    display: flex !important;
+    gap: 10px !important;
+}
+
+body .gdpr-btn {
+    flex: 1 !important;
+    padding: 10px 16px !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-family: 'Space Grotesk', sans-serif !important;
+}
+
+body .gdpr-reject {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    color: #333 !important;
+}
+
+body .gdpr-reject:hover {
+    border-color: #333 !important;
+}
+
+body .gdpr-accept {
+    background: #2563eb !important;
+    border: 1px solid #2563eb !important;
+    color: #fff !important;
+}
+
+body .gdpr-accept:hover {
+    background: #1d4ed8 !important;
 }

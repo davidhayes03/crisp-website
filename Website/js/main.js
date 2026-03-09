@@ -226,4 +226,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    
+    /* ========================================
+       TESTIMONIALS SLIDER
+       ======================================== */
+    const testimonialsSlider = document.querySelector('.testimonials-slider');
+    if (testimonialsSlider && typeof Swiper !== 'undefined') {
+        new Swiper('.testimonials-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+        });
+    }
+    
+    
+    /* ========================================
+       SCROLL ANIMATIONS
+       ======================================== */
+    
+    // Animate sections on scroll
+    const sections = document.querySelectorAll('.about-section, .developments-section, .about-team-section, .services-section, .testimonials-section, .contact-section');
+    
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    });
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+    
+    
 });
