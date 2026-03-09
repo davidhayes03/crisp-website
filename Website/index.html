@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crisp Construction - Design & Architecture</title>
+    <meta name="description" content="Crisp Construction - Premium property development company in Edenbridge, Kent. Specialising in new builds, renovations, and residential developments.">
+    <meta name="keywords" content="construction, property development, building, renovation, Kent, Edenbridge, residential, new build">
+    <meta property="og:title" content="Crisp Construction">
+    <meta property="og:description" content="Premium property development in Kent">
+    <link rel="canonical" href="https://crisp.co.uk">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +19,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
 </head>
 <body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    
     <!-- Menu Overlay -->
     <div class="menu-overlay" id="menuOverlay"></div>
 
@@ -108,6 +116,7 @@
     </header>
 
     <!-- Hero Section with Video -->
+    <main id="main-content">
     <section class="hero-section" id="hero-section">
         <video class="hero-video" autoplay muted loop playsinline poster="images/pexels-anete-lusina-4792479slim.jpg">
             <source src="images/stockKitchenVid.mp4" type="video/mp4">
@@ -327,12 +336,42 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="testimonials-title"><span class="title-black">Client</span><br><span class="title-blue">Testimonials.</span></h2>
+            
+            <div class="testimonials-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial-card swiper-slide">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">"Crisp Construction transformed our vision into reality. Their attention to detail and professionalism throughout the build was exceptional."</blockquote>
+                        <div class="testimonial-author"><strong>Sarah Mitchell</strong><span>Homeowner, Edenbridge</span></div>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">"Working with Crisp was a pleasure from start to finish. They delivered our project on time and the quality of workmanship is outstanding."</blockquote>
+                        <div class="testimonial-author"><strong>James Crawford</strong><span>Property Developer, Kent</span></div>
+                    </div>
+                    <div class="testimonial-card swiper-slide">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">"The team at Crisp understood exactly what we wanted. They created a stunning family home that has exceeded all our expectations."</blockquote>
+                        <div class="testimonial-author"><strong>Emma Thompson</strong><span>Homeowner, Sevenoaks</span></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <h2 class="contact-title">Let's Work Together</h2>
         <p class="contact-text">If you're interested in partnering with us, selling land, or learning more about our current and upcoming developments, we would be pleased to hear from you.</p>
         <a href="mailto:info@crisp.co.uk" class="contact-cta">Contact Us</a>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
