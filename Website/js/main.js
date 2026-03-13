@@ -93,11 +93,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Handle menu toggle click directly on the toggle span
+    asideMenu.querySelectorAll('.menu-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const link = toggle.closest('.menu-link');
+            const menuItem = link.closest('.menu-item');
+            const subMenus = menuItem.querySelectorAll('.sub-menu');
+            
+            if (menuItem.classList.contains('menu-open')) {
+                menuItem.classList.remove('menu-open');
+                subMenus.forEach(sm => sm.classList.remove('open'));
+                toggle.textContent = '+';
+            } else {
+                menuItem.classList.add('menu-open');
+                subMenus.forEach(sm => sm.classList.add('open'));
+                toggle.textContent = '−';
+            }
+        });
+    });
+    
     // Close menu when clicking a link (but not when toggling sub-menus)
     asideMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', (e) => {
-            const hasSubMenu = link.nextElementSibling && link.nextElementSibling.classList.contains('sub-menu');
-            if (hasSubMenu) return;
+            // Don't close menu if clicking on menu toggle
+            if (link.querySelector('.menu-toggle')) {
+                return;
+            }
             
             burger.classList.remove('open');
             asideMenu.classList.remove('open');
@@ -107,51 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     
-    /* ========================================
-       SUB-MENU TOGGLE
-       ======================================== */
-    const menuItems = document.querySelectorAll('.aside-menu .menu-item > a.menu-link');
-    
-    menuItems.forEach(link => {
-        link.addEventListener('click', (e) => {
-            const menuItem = link.parentElement;
-            const subMenu = menuItem.querySelector('.sub-menu');
-            const toggle = menuItem.querySelector('.menu-toggle');
-            
-            if (!subMenu) return;
-            
-            e.preventDefault();
-            e.stopPropagation();
-            
-            menuItems.forEach(otherLink => {
-                const otherItem = otherLink.parentElement;
-                if (otherItem !== menuItem) {
-                    otherItem.classList.remove('menu-open');
-                    const otherSubMenu = otherItem.querySelector('.sub-menu');
-                    const otherToggle = otherItem.querySelector('.menu-toggle');
-                    if (otherSubMenu) {
-                        otherSubMenu.classList.remove('open');
-                        otherToggle.textContent = '+';
-                    }
-                }
-            });
-            
-            if (menuItem.classList.contains('menu-open')) {
-                menuItem.classList.remove('menu-open');
-                subMenu.classList.remove('open');
-                toggle.textContent = '+';
-            } else {
-                menuItem.classList.add('menu-open');
-                subMenu.classList.add('open');
-                toggle.textContent = '−';
-            }
-        });
-    });
-    
-    
-    /* ========================================
-   DEVELOPMENTS FILTER
-   ======================================== */
     const devFilterBtns = document.querySelectorAll('.development-filters__btn');
     const devCards = document.querySelectorAll('.development-card');
 
