@@ -31,41 +31,35 @@ document.addEventListener('DOMContentLoaded', function() {
     /* ========================================
        SCROLL INDICATOR
        ======================================== */
-    const scrollIndicator = document.getElementById('scrollIndicator');
-    const footer = document.querySelector('.footer');
-    const sections = ['hero-section', 'about', 'developments', 'team', 'services', 'contact'];
+    var scrollIndicator = document.getElementById('scrollIndicator');
+    var footer = document.querySelector('.footer');
+    var sections = ['about', 'developments', 'team', 'services', 'testimonials', 'contact'];
+    var sectionIndex = 0;
     
-    // Click to scroll to next section
-    scrollIndicator.addEventListener('click', () => {
-        const currentSection = sections.find(id => {
-            const el = document.getElementById(id);
-            if (!el) return false;
-            const rect = el.getBoundingClientRect();
-            return rect.top <= 100 && rect.bottom > 100;
-        }) || 'hero-section';
-        
-        const currentIndex = sections.indexOf(currentSection);
-        const nextSection = sections[currentIndex + 1];
-        
-        if (nextSection) {
-            const nextEl = document.getElementById(nextSection);
-            if (nextEl) {
-                nextEl.scrollIntoView({ behavior: 'smooth' });
+    if (scrollIndicator) {
+        scrollIndicator.style.zIndex = '9999';
+        scrollIndicator.onclick = function() {
+            var target = document.getElementById(sections[sectionIndex]);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
             }
-        }
-    });
+            sectionIndex++;
+            if (sectionIndex >= sections.length) {
+                sectionIndex = 0;
+            }
+        };
+    }
     
-    // Hide scroll indicator when near footer
-    window.addEventListener('scroll', () => {
-        const footerRect = footer.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        if (footerRect.top < windowHeight + 100) {
-            scrollIndicator.classList.add('hidden');
-        } else {
-            scrollIndicator.classList.remove('hidden');
-        }
-    });
+    if (footer && scrollIndicator) {
+        window.addEventListener('scroll', function() {
+            var footerRect = footer.getBoundingClientRect();
+            if (footerRect.top < window.innerHeight + 100) {
+                scrollIndicator.classList.add('hidden');
+            } else {
+                scrollIndicator.classList.remove('hidden');
+            }
+        });
+    }
     
     
     /* ========================================
@@ -252,30 +246,16 @@ document.addEventListener('DOMContentLoaded', function() {
        SCROLL ANIMATIONS
        ======================================== */
     
-    // Animate sections on scroll
-    const sections = document.querySelectorAll('.about-section, .developments-section, .about-team-section, .services-section, .testimonials-section, .contact-section');
-    
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('animate-in');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
     
-    sections.forEach(section => {
+    document.querySelectorAll('.about-section, .developments-section, .about-team-section, .services-section, .testimonials-section, .contact-section').forEach(section => {
+        section.classList.add('animate-on-scroll');
         observer.observe(section);
     });
     
