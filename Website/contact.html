@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Crisp Construction</title>
+    <meta name="description" content="Contact Crisp Construction Ltd - Premium property development company in Edenbridge, Kent. Get in touch for new builds, renovations, and developments.">
+    <meta property="og:title" content="Contact Us - Crisp Construction">
+    <meta property="og:description" content="Get in touch with us for your next property development project.">
+    <link rel="canonical" href="https://crisp.co.uk/contact.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="aside-menu" id="asideMenu">
+        <button class="menu-close" id="menuClose">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="menu-container">
+            <div class="menu-col-left">
+                <ul>
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link">
+                            <span class="menu-number">01</span>
+                            <span class="menu-name">Home</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="index.html#about" class="menu-link">
+                            <span class="menu-number">02</span>
+                            <span class="menu-name">About</span>
+                        </a>
+                    </li>
+                    <li class="menu-item menu-open">
+                        <a href="index.html#developments" class="menu-link">
+                            <span class="menu-number">01</span>
+                            <span class="menu-name">Projects</span>
+                            <span class="menu-toggle">−</span>
+                        </a>
+                        <h5 style="color: white; padding: 0 0 5px 100px;">Completed</h5>
+                        <ul class="sub-menu open">
+                            <li><a href="pages/130HighStreet.html">130 High Street, Edenbridge</a></li>
+                            <li><a href="pages/130aHighStreet.html">130a High Street, Edenbridge</a></li>
+                            <li><a href="pages/6EdenView.html">6 Eden View, Edenbridge</a></li>
+                            <li><a href="pages/7EdenView.html">7 Eden View, Edenbridge</a></li>
+                        </ul>
+                        <h5 style="color: white; padding: 0 0 5px 100px;">In Progress</h5>
+                        <ul class="sub-menu open">
+                            <li><a href="pages/CherryBryn.html">Cherry Bryn, Edenbridge</a></li>
+                        </ul>
+                        <h5 style="color: white; padding: 0 0 5px 100px;">Future</h5>
+                        <ul class="sub-menu open">
+                            <li><a href="pages/EdenView.html">Eden View, Edenbridge</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="index.html#team" class="menu-link">
+                            <span class="menu-number">02</span>
+                            <span class="menu-name">Vision</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="index.html#services" class="menu-link">
+                            <span class="menu-number">03</span>
+                            <span class="menu-name">Services</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#contact" class="menu-link">
+                            <span class="menu-number">04</span>
+                            <span class="menu-name">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-col-right">
+                <div></div>
+                <div class="contact-links">
+                    <a href="tel:01732300018">01732300018</a>
+                    <a href="mailto:info@crispconstruct.co.uk">info@crispconstruct.co.uk</a>
+                    <p>124 High Street<br>Edenbridge, Kent TN8 5AY</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <header class="main-header" id="mainHeader">
+        <a href="index.html" class="header-logo">
+            <img src="images/logo/Crisp-interiors-logo-trans-whitetext.png" alt="CRISP">
+        </a>
+        <button id="burger" aria-label="Toggle menu">
+            <div class="bar-container">
+                <span class="bar top"></span>
+                <span class="bar bottom"></span>
+            </div>
+            <span class="menu-text">Menu</span>
+        </button>
+    </header>
+
+    <main id="main-content">
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="contact-hero-title animate-on-scroll">Get in Touch</h1>
+                <p class="contact-hero-subtitle animate-on-scroll">Let's discuss your next project</p>
+            </div>
+        </section>
+
+        <section class="contact-content" id="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-wrapper animate-on-scroll">
+                        <h2>Send us a Message</h2>
+                        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwzgvry" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required autocomplete="name">
+                                <label for="name">Your Name</label>
+                                <span class="form-border"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required autocomplete="email">
+                                <label for="email">Email Address</label>
+                                <span class="form-border"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" autocomplete="tel">
+                                <label for="phone">Phone Number</label>
+                                <span class="form-border"></span>
+                            </div>
+                            <div class="form-group">
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected></option>
+                                    <option value="new-build">New Build Project</option>
+                                    <option value="renovation">Renovation</option>
+                                    <option value="development">Land Development</option>
+                                    <option value="partnership">Business Partnership</option>
+                                    <option value="other">Other Enquiry</option>
+                                </select>
+                                <label for="subject" class="select-label">Nature of Enquiry</label>
+                                <span class="form-border"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="message">Your Message</label>
+                                <span class="form-border"></span>
+                            </div>
+                            <button type="submit" class="form-submit">
+                                <span>Send Message</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-wrapper animate-on-scroll">
+                        <div class="contact-info-card">
+                            <h3>Visit Us</h3>
+                            <p>Crisp Construction Ltd<br>124 High Street<br>Edenbridge, Kent<br>TN8 5AY</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <h3>Call Us</h3>
+                            <p><a href="tel:01732300018">01732 300018</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <h3>Email Us</h3>
+                            <p><a href="mailto:info@crispconstruct.co.uk">info@crispconstruct.co.uk</a></p>
+                        </div>
+                        <div class="contact-info-card">
+                            <h3>Follow Us</h3>
+                            <p><a href="https://www.instagram.com/crispconstructiondevelopments/" target="_blank" rel="noopener">Instagram</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-wrapper animate-on-scroll">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.288834178637!2d0.06331667677593124!3d51.19449267155004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47df5042a1b9e6e1%3A0x5e4b4f4f4f4f4f4f!2s124%20High%20St%2C%20Edenbridge%2C%20Kent%20TN8%205AY!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Our Location">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo/Crisp Construction ltd logo.jpg" alt="CRISP">
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-menu">
+                        <li><a href="index.html#hero-section">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#developments">Developments</a></li>
+                        <li><a href="index.html#team">Vision</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul class="footer-menu">
+                        <li><a href="https://www.instagram.com/crispconstructiondevelopments/" target="_blank" rel="noopener">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-address">
+                    <p class="address-title">Address</p>
+                    <p>Crisp Construction Ltd</p>
+                    <p>124 High Street</p>
+                    <p>Edenbridge, Kent</p>
+                    <p>TN8 5AY</p>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-back-to-top">
+                        <a href="#">
+                            Back to top
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Crisp Construction Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            gsap.from('.contact-hero-title', {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out',
+                delay: 0.2
+            });
+            gsap.from('.contact-hero-subtitle', {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                ease: 'power3.out',
+                delay: 0.4
+            });
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', function(e) {
+                const btn = form.querySelector('.form-submit');
+                btn.innerHTML = '<span>Sending...</span>';
+                btn.disabled = true;
+            });
+
+            document.querySelectorAll('.form-group input, .form-group textarea, .form-group select').forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                input.addEventListener('blur', function() {
+                    if (!this.value) {
+                        this.parentElement.classList.remove('focused');
+                    }
+                });
+                if (input.value) {
+                    input.parentElement.classList.add('focused');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
