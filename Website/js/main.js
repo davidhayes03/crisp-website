@@ -68,25 +68,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const burger = document.getElementById('burger');
     const asideMenu = document.getElementById('asideMenu');
     const menuOverlay = document.getElementById('menuOverlay');
-    
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('open');
-        asideMenu.classList.toggle('open');
-        menuOverlay.classList.toggle('open');
-        document.body.classList.toggle('stop-scrolling');
-    });
-    
-    menuOverlay.addEventListener('click', () => {
-        burger.classList.remove('open');
-        asideMenu.classList.remove('open');
-        menuOverlay.classList.remove('open');
-        document.body.classList.remove('stop-scrolling');
-    });
-    
+
+    if (burger) {
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('open');
+            asideMenu.classList.toggle('open');
+            menuOverlay.classList.toggle('open');
+            document.body.classList.toggle('stop-scrolling');
+        });
+    }
+
+    if (menuOverlay) {
+        menuOverlay.addEventListener('click', () => {
+            burger && burger.classList.remove('open');
+            asideMenu.classList.remove('open');
+            menuOverlay.classList.remove('open');
+            document.body.classList.remove('stop-scrolling');
+        });
+    }
+
     const menuClose = document.getElementById('menuClose');
     if (menuClose) {
         menuClose.addEventListener('click', () => {
-            burger.classList.remove('open');
+            burger && burger.classList.remove('open');
             asideMenu.classList.remove('open');
             menuOverlay.classList.remove('open');
             document.body.classList.remove('stop-scrolling');

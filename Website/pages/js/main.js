@@ -48,10 +48,10 @@ scrollIndicator.addEventListener('click', () => {
         const rect = el.getBoundingClientRect();
         return rect.top <= 100 && rect.bottom > 100;
     }) || 'project-banner';
-    
+
     const currentIndex = sections.indexOf(currentSection);
     const nextSection = sections[currentIndex + 1];
-    
+
     if (nextSection) {
         const nextEl = document.getElementById(nextSection);
         if (nextEl) {
@@ -63,7 +63,7 @@ scrollIndicator.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     const footerRect = footer.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    
+
     if (footerRect.top < windowHeight + 100) {
         scrollIndicator.classList.add('hidden');
     } else {
@@ -76,20 +76,26 @@ const floorplanBtn = document.getElementById('floorplanBtn');
 const floorplanLightbox = document.getElementById('floorplanLightbox');
 const lightboxClose = document.getElementById('lightboxClose');
 
-floorplanBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    floorplanLightbox.classList.add('open');
-    document.body.classList.add('stop-scrolling');
-});
+if (floorplanBtn && floorplanLightbox) {
+    floorplanBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        floorplanLightbox.classList.add('open');
+        document.body.classList.add('stop-scrolling');
+    });
+}
 
-lightboxClose.addEventListener('click', () => {
-    floorplanLightbox.classList.remove('open');
-    document.body.classList.remove('stop-scrolling');
-});
-
-floorplanLightbox.addEventListener('click', (e) => {
-    if (e.target === floorplanLightbox) {
+if (lightboxClose && floorplanLightbox) {
+    lightboxClose.addEventListener('click', () => {
         floorplanLightbox.classList.remove('open');
         document.body.classList.remove('stop-scrolling');
-    }
-});
+    });
+}
+
+if (floorplanLightbox) {
+    floorplanLightbox.addEventListener('click', (e) => {
+        if (e.target === floorplanLightbox) {
+            floorplanLightbox.classList.remove('open');
+            document.body.classList.remove('stop-scrolling');
+        }
+    });
+}
