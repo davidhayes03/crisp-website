@@ -109,9 +109,9 @@
 
     <main id="main-content">
         <section class="contact-hero">
-            <div class="container">
-                <h1 class="contact-hero-title animate-on-scroll">Get in Touch</h1>
-                <p class="contact-hero-subtitle animate-on-scroll">Let's discuss your next project</p>
+            <div class="container" style="color:white">
+                <h1 class="contact-hero-title ">Get in Touch</h1>
+                <p class="contact-hero-subtitle ">Let's discuss your next project</p>
             </div>
         </section>
 
@@ -120,7 +120,8 @@
                 <div class="contact-grid">
                     <div class="contact-form-wrapper animate-on-scroll">
                         <h2>Send us a Message</h2>
-                        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwzgvry" method="POST">
+                        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="eeb251dc-95fd-4c37-b43d-c0d07d0edcd5">
                             <div class="form-group">
                                 <input type="text" id="name" name="name" required autocomplete="name">
                                 <label for="name">Your Name</label>
