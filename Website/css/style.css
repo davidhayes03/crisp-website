@@ -1366,34 +1366,47 @@ img {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
-    
+
     .swiper-slide {
         width: 80% !important;
         margin-right: 20px !important;
     }
-    
+
     .swiper-slide-active .project-image {
         aspect-ratio: 1/1;
     }
-    
+
     .project-info {
         opacity: 1;
         transform: none;
         position: static;
     }
-    
+
     .about-content {
         grid-template-columns: 1fr;
     }
-    
+
     .about-text {
         text-align: left;
     }
-    
+
     .about-team-content {
         grid-template-columns: 1fr;
     }
-    
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col:last-child,
+    .footer-col:nth-child(4) {
+        grid-column: span 1;
+    }
+
+    .footer-back-to-top {
+        text-align: left;
+    }
+
 
 /* ========================================
    RESPONSIVE - SMALL MOBILE

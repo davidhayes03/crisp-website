@@ -659,10 +659,17 @@ body {
         text-align:justify;
     }
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .footer-col:last-child,
+    .footer-col:nth-child(4) {
+        grid-column: span 1;
+    }
+    .footer-back-to-top {
+        text-align: left;
     }
     .project-title-sub {
-       
+
         font-size: 1rem;
     }
 }
