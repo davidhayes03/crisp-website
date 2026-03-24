@@ -9,22 +9,28 @@ document.addEventListener('DOMContentLoaded', function() {
        ======================================== */
     const header = document.getElementById('mainHeader');
     const headerLogo = document.querySelector('.header-logo img');
+    const burger = document.getElementById('burger');
     const whiteLogo = 'images/logo/Crisp-interiors-logo-trans-whitetext.png';
     const darkLogo = 'images/logo/Crisp-interiors-logo-trans.png';
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('head-pinned');
             headerLogo.src = darkLogo;
+            burger.classList.remove('light');
         } else {
             header.classList.remove('head-pinned');
             headerLogo.src = whiteLogo;
+            burger.classList.add('light');
         }
     });
-    
+
     // Also check initial state
     if (window.scrollY > 50) {
         headerLogo.src = darkLogo;
+        burger.classList.remove('light');
+    } else {
+        burger.classList.add('light');
     }
     
     
@@ -65,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
     /* ========================================
        MOBILE MENU TOGGLE
        ======================================== */
-    const burger = document.getElementById('burger');
     const asideMenu = document.getElementById('asideMenu');
     const menuOverlay = document.getElementById('menuOverlay');
 

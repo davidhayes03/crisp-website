@@ -1,15 +1,25 @@
 // Header scroll effect
 const header = document.getElementById('mainHeader');
+const burger = document.getElementById('burger');
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         header.classList.add('head-pinned');
+        burger.classList.remove('light');
     } else {
         header.classList.remove('head-pinned');
+        burger.classList.add('light');
     }
 });
 
+// Check initial state
+if (window.scrollY > 50) {
+    burger.classList.remove('light');
+} else {
+    burger.classList.add('light');
+}
+
 // Menu toggle
-const burger = document.getElementById('burger');
 const asideMenu = document.getElementById('asideMenu');
 const menuOverlay = document.getElementById('menuOverlay');
 

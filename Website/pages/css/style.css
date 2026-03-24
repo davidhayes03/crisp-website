@@ -72,6 +72,11 @@ body {
     transition: all 0.3s ease;
 }
 
+/* Light burger for dark backgrounds */
+#burger.light .bar {
+    background-color: var(--color-white);
+}
+
 #burger:hover .bar.top {
     width: 40px;
 }
@@ -91,6 +96,12 @@ body {
     font-size: 1rem;
     color: var(--color-black);
     opacity: 0.6;
+    transition: all 0.3s;
+}
+
+/* Light menu text for dark backgrounds */
+#burger.light .menu-text {
+    color: var(--color-white);
 }
 
 /* Menu Overlay */
@@ -112,7 +123,10 @@ body {
     visibility: visible;
 }
 
-/* Full Screen Menu */
+/* ========================================
+   FULL SCREEN SLIDE-IN MENU
+   ======================================== */
+
 .aside-menu {
     position: fixed;
     top: 0;
@@ -127,86 +141,170 @@ body {
     overflow-y: auto;
 }
 
-.aside-menu.open {
-    transform: translateX(0);
-}
+    .aside-menu.open {
+        transform: translateX(0);
+    }
 
-.menu-close {
-    position: absolute;
-    top: 25px;
-    right: 40px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 3rem;
-    line-height: 1;
-    cursor: pointer;
-    z-index: 2600;
-    transition: transform 0.3s ease;
-}
+    .aside-menu .menu-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 100;
+    }
 
-.menu-close:hover {
-    transform: scale(1.1);
-}
+        .aside-menu .menu-close svg {
+            width: 32px;
+            height: 32px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
 
-.aside-menu .menu-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
-    padding-top: 100px;
-}
+        .aside-menu .menu-close:hover svg {
+            color: #2563eb;
+        }
 
-.aside-menu .menu-col-left {
-    padding: 0 40px;
-}
+    .aside-menu .menu-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+        padding-top: 100px;
+    }
 
-.aside-menu .menu-col-right {
-    padding: 0 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    .aside-menu .menu-col-left {
+        padding: 0 40px;
+    }
 
-.aside-menu ul {
-    list-style: none;
-    padding: 0;
-}
+    .aside-menu .menu-col-right {
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100vh - 100px);
+        padding-bottom: 40px;
+    }
 
-.aside-menu > .menu-container > .menu-col-left > ul > li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+    .aside-menu .contact-links {
+        color: #fff;
+        text-align: right;
+        margin-top: auto;
+    }
 
-.aside-menu .menu-item > a {
-    display: flex;
-    align-items: baseline;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    padding: 25px 0;
-    line-height: 1;
-}
+        .aside-menu .contact-links a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease, color 0.3s ease;
+        }
 
-.aside-menu .menu-number {
-    font-family: 'Courier New', monospace;
-    font-size: 0.7rem;
-    margin-right: 80px;
-    opacity: 0.6;
-}
+            .aside-menu .contact-links a:hover {
+                opacity: 1;
+                color: #2563eb;
+            }
 
-.aside-menu .menu-name {
-    flex: 1;
-}
+        .aside-menu .contact-links p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
 
-.aside-menu .contact-links a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    opacity: 0.8;
-}
+    .aside-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .aside-menu > .menu-container > .menu-col-left > ul > li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .aside-menu .menu-item > a {
+        display: flex;
+        align-items: baseline;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+        padding: 25px 0;
+        line-height: 1;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+        .aside-menu .menu-item > a:hover {
+            color: #2563eb;
+        }
+
+    .aside-menu .menu-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.7rem;
+        margin-right: 80px;
+        opacity: 0.6;
+    }
+
+    .aside-menu .menu-name {
+        flex: 1;
+    }
+
+    .aside-menu .menu-toggle {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        opacity: 0.6;
+        cursor: pointer;
+    }
+
+    .aside-menu .sub-menu {
+        display: none;
+        padding: 0 0 20px 100px;
+    }
+
+        .aside-menu .sub-menu.open {
+            display: block;
+        }
+
+        .aside-menu .sub-menu li {
+            padding: 8px 0;
+        }
+
+            .aside-menu .sub-menu li a {
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                letter-spacing: 1px;
+            }
+
+                .aside-menu .sub-menu li a:hover {
+                    color: #fff;
+                }
+
+    .aside-menu .contact-links {
+        color: #fff;
+    }
+
+        .aside-menu .contact-links a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+            .aside-menu .contact-links a:hover {
+                opacity: 1;
+            }
+
 
 /* Project Banner */
 .project-banner {

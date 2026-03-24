@@ -154,6 +154,11 @@ img {
     transition: all 0.3s ease;
 }
 
+/* Light burger for dark backgrounds */
+#burger.light .bar {
+    background-color: var(--color-white);
+}
+
 #burger:hover .bar.top {
     width: 40px;
 }
@@ -173,7 +178,12 @@ img {
     font-size: 1rem;
     color: var(--color-black);
     opacity: 0.6;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
+}
+
+/* Light menu text for dark backgrounds */
+#burger.light .menu-text {
+    color: var(--color-white);
 }
 
 #burger.open .menu-text {

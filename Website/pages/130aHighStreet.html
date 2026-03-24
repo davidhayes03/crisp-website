@@ -19,41 +19,81 @@
     <!-- Menu Overlay -->
     <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!-- Full Screen Menu -->
-    <aside class="aside-menu" id="asideMenu">
-        <button class="menu-close" id="menuClose">&times;</button>
-        <div class="menu-container">
-            <div class="menu-col-left">
-                <ul>
-                    <li class="menu-item">
-                        <a href="../index.html">
-                            <span class="menu-number">01</span>
-                            <span class="menu-name">Home</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#">
-                            <span class="menu-number">02</span>
-                            <span class="menu-name">Projects</span>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#contact">
-                            <span class="menu-number">04</span>
-                            <span class="menu-name">Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="menu-col-right">
-                <div class="contact-links">
-                    <a href="tel:01732300018">01732300018</a>
-                    <a href="mailto:info@crispconstruct.co.uk">info@crispconstruct.co.uk</a>
-                    <a href="#">123 High Street, Kent, UK</a>
-                </div>
-            </div>
-        </div>
-    </aside>
+	<!-- Full Screen Slide-in Menu -->
+	<aside class="aside-menu" id="asideMenu">
+		<button class="menu-close" id="menuClose">
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<path d="M18 6L6 18M6 6l12 12" />
+			</svg>
+		</button>
+		<div class="menu-container">
+			<div class="menu-col-left">
+				<ul>
+					<li class="menu-item">
+						<a href="../index.html#hero-section" class="menu-link">
+							<span class="menu-number">01</span>
+							<span class="menu-name">Home</span>
+						</a>
+					</li>
+					<li class="menu-item">
+						<a href="../index.html#about" class="menu-link">
+							<span class="menu-number">02</span>
+							<span class="menu-name">About</span>
+						</a>
+					</li>
+					<li class="menu-item menu-open">
+						<a href="../index.html#developments" class="menu-link">
+							<span class="menu-number">01</span>
+							<span class="menu-name">Projects</span>
+							<span class="menu-toggle">−</span>
+						</a>
+						<h5 style="color: white; padding: 0 0 5px 100px;">Completed</h5>
+						<ul class="sub-menu open">
+							<li><a href="130HighStreet.html">130 High Street, Edenbridge</a></li>
+							<li><a href="130aHighStreet.html">130a High Street, Edenbridge</a></li>
+							<li><a href="6EdenView.html">6 Eden View, Edenbridge</a></li>
+							<li><a href="7EdenView.html">7 Eden View, Edenbridge</a></li>
+						</ul>
+						<h5 style="color: white; padding: 0 0 5px 100px;">In Progress</h5>
+						<ul class="sub-menu open">
+							<li><a href="CherryBryn.html">Cherry Bryn, Edenbridge</a></li>
+						</ul>
+						<h5 style="color: white; padding: 0 0 5px 100px;">Future</h5>
+						<ul class="sub-menu open">
+							<li><a href="EdenView.html">Eden View, Edenbridge</a></li>
+						</ul>
+					</li>
+					<li class="menu-item">
+						<a href="../index.html#team" class="menu-link">
+							<span class="menu-number">02</span>
+							<span class="menu-name">Vision</span>
+						</a>
+					</li>
+					<li class="menu-item">
+						<a href="../index.html#services" class="menu-link">
+							<span class="menu-number">03</span>
+							<span class="menu-name">Services</span>
+						</a>
+					</li>
+
+					<li class="menu-item">
+						<a href="#contact" class="menu-link">
+							<span class="menu-number">04</span>
+							<span class="menu-name">Contact</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="menu-col-right">
+				<div></div>
+				<div class="contact-links">
+					<a href="tel:01732300018">01732300018</a>
+					<a href="mailto:info@crispconstruct.co.uk">info@crispconstruct.co.uk</a>
+					<p>124 High Street<br>Edenbridge, Kent TN8 5AY</p>
+				</div>
+			</div>
+		</div>
+	</aside>
 
     <!-- Header -->
     <header class="main-header" id="mainHeader">
